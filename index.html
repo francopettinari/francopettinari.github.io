@@ -218,13 +218,14 @@ $(document).ready(function()
                 text: 'Temperature °C'
             },
             id: 'T'
-    }, {
+         }, {
             title: {
-                text: 'Other'
+                text: 'Heat/Cool'
             },
+            min: -1, max: 1,
             opposite: true,
             id: 'O'
-    }],
+        }],
 		exporting: {
 		  enabled: true,
       csv: {
