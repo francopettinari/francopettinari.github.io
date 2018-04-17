@@ -308,14 +308,14 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
    var fieldList= sentFieldList;
    var channelIndex = sentChannelIndex;
    var first_Date = new Date();
-   if (typeof fieldList[0].data[0] != "undefined") first_Date.setTime(fieldList[0].data[0][0]+7*60*60*1000);//adjust for 7 hour difference from GMT (Zulu time)
-   else if (typeof fieldList[1].data[0] != "undefined") first_Date.setTime(fieldList[1].data[0][0]+7*60*60*1000);
-   else if (typeof fieldList[2].data[0] != "undefined") first_Date.setTime(fieldList[2].data[0][0]+7*60*60*1000);
-   else if (typeof fieldList[3].data[0] != "undefined") first_Date.setTime(fieldList[3].data[0][0]+7*60*60*1000);
-   else if (typeof fieldList[4].data[0] != "undefined") first_Date.setTime(fieldList[4].data[0][0]+7*60*60*1000);
-   else if (typeof fieldList[5].data[0] != "undefined") first_Date.setTime(fieldList[5].data[0][0]+7*60*60*1000);
-   else if (typeof fieldList[6].data[0] != "undefined") first_Date.setTime(fieldList[6].data[0][0]+7*60*60*1000);
-   else if (typeof fieldList[7].data[0] != "undefined") first_Date.setTime(fieldList[7].data[0][0]+7*60*60*1000);
+   if (typeof fieldList[0].data[0] != "undefined") first_Date.setTime(fieldList[0].data[0][0]+1*60*60*1000);//adjust for 1 hour difference from GMT (Rome time)
+   else if (typeof fieldList[1].data[0] != "undefined") first_Date.setTime(fieldList[1].data[0][0]+1*60*60*1000);
+   else if (typeof fieldList[2].data[0] != "undefined") first_Date.setTime(fieldList[2].data[0][0]+1*60*60*1000);
+   else if (typeof fieldList[3].data[0] != "undefined") first_Date.setTime(fieldList[3].data[0][0]+1*60*60*1000);
+   else if (typeof fieldList[4].data[0] != "undefined") first_Date.setTime(fieldList[4].data[0][0]+1*60*60*1000);
+   else if (typeof fieldList[5].data[0] != "undefined") first_Date.setTime(fieldList[5].data[0][0]+1*60*60*1000);
+   else if (typeof fieldList[6].data[0] != "undefined") first_Date.setTime(fieldList[6].data[0][0]+1*60*60*1000);
+   else if (typeof fieldList[7].data[0] != "undefined") first_Date.setTime(fieldList[7].data[0][0]+1*60*60*1000);
    var end = first_Date.toJSON();
    window.console && console.log('earliest date:',end);
    window.console && console.log('sentChannelIndex:',sentChannelIndex);
@@ -358,7 +358,7 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
   </script>
     <title>Nesquik temperature logger</title>
   </head>
-  <body style="                      background-color: white;">
+  <body style="background-color: white;">
     <div id="chart-container" style="height: 600px;"><br>
       Chart 
       <br>
