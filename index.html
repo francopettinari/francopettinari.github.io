@@ -291,7 +291,7 @@ $(document).ready(function()
 function loadOneChannel(){ 
   // load a channel selected in the popUp menu.
   var selectedChannel=document.getElementById("Channel Select");
-  var maxLoads=document.getElementById("Loads").value ;
+  var maxLoads=10000;//document.getElementById("Loads").value ;
   var channelIndex = selectedChannel.selectedIndex;
   loadChannelHistory(channelIndex,channelKeys[channelIndex].channelNumber,channelKeys[channelIndex].key,channelKeys[channelIndex].fieldList,0,maxLoads); 
 } 
