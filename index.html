@@ -20,7 +20,7 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:428241, name:'Nesquick temperature logger',key:'0GJOMN7AYJQZEL2Z',
-                  fieldList:[{field:2,axis:'T'},{field:3,axis:'T'}]});                
+                  fieldList:[{field:2,axis:'T'},{field:3,axis:'T'},{field:4,axis:'O'},{field:6,axis:'T'}]});                
     
 // user's timezone offset
 var myOffset = new Date().getTimezoneOffset();
@@ -218,7 +218,14 @@ $(document).ready(function()
                 text: 'Temperature °C'
             },
             id: 'T'
-         }],
+         }, {
+            title: {
+                text: 'Heat/Cool'
+            },
+            min: -1, max: 1,
+            opposite: true,
+            id: 'O'
+        }],
 		exporting: {
 		  enabled: true,
       csv: {
